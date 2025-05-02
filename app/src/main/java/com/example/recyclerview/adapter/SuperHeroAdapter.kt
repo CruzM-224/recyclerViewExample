@@ -19,7 +19,8 @@ class SuperHeroAdapter(val superHeroList: List<SuperHero>) : RecyclerView.Adapte
         holder: SuperHeroViewHolder,
         position: Int
     ) {
-
+        val item = superHeroList[position]
+        holder.render(item)
     }
 
     override fun getItemCount(): Int = superHeroList.size
